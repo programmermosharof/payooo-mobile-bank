@@ -3,6 +3,12 @@
       // 1: ============== Get The Agent Number $ Validate ==============
       const cashoutNumber = getValueFormInput("cashout-number");
       
+       if(cashoutNumber.length !=11){
+        alert("Your Number is Not valid");
+        return;
+       }
+
+      
       //2: ============== Cashout Amount ==============
          const cashoutAmount = getValueFormInput('cashout-amount');
          
