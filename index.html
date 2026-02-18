@@ -1,29 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- CSS File Connect -->
+    <!--  vanilla CSS File Connect -->
     <link rel="stylesheet" href="Style/index.css">
-    <!-- Tailwind CSS Set up  -->
+
+     <!-- daisyUI as a Tailwind plugin setUp -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+
+     <!-- Tailwind CSS Set up  -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <title>payooo-mobile-bank</title>
+
+    <!-- Font Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+     <!-- favicon -->
+      <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
+     
+    <title>Payoo-Login</title>
 </head>
-<body>
-    <head>
+<body class="min-h-screen max-w-md bg-[#f4f5f7] m-auto">
+    <!-- Logo -->
+    <div class="logo w-[263px] mx-auto pt-[50%]">
+            <img src="assets/Logo-full.png" alt="Payoo Logo">
+    </div>
+    <!-- Login form -->
+    <div class="form pt-10">
+        <div class="card bg-[#ffffff] w-full max-w-sm shrink-0 shadow mx-auto rounded-3xl">
+      <div class="card-body">
+        <fieldset class="fieldset">
+          <label class="label font-bold text-neutral ">Mobile Number</label>
+          <input id="input-number" minlength="11" maxlength="11" type="text" class="input rounded-full bg-[#f4f5f7] " placeholder="Enter your number" />
 
+          <br>
+
+
+          <label class="label font-bold text-neutral ">4 Digit Pin</label>
+          <input id="input-pin" minlength="4" maxlength="4"  type="password" class="input rounded-full bg-[#f4f5f7]" placeholder="Enter 4 Digit Pin" />
+          <!-- <div><a class="link link-hover">Forgot password?</a></div> -->
+          <button id="login-btn" class="btn   btn-primary mt-4 rounded-full">Login</button>
+        </fieldset>
+      </div>
+    </div>
+    </div>
+ 
+
+  
         
 
-    </head>
-
-    <main>
-
-    </main>
-
-    <footer>
-        
-    </footer>
-    
+      <!-- JavaScript file  -->
+       <script src="JavaScript/login.js"></script>
 </body>
 </html>
