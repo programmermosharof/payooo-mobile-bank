@@ -12,14 +12,15 @@
       //2: ============== Cashout Amount ==============
          const cashoutAmount = getValueFormInput('cashout-amount');
          
-      // 3: ===== Get The Current Balance ==============
-      const balanceElement = document.getElementById('balance');
-      const balance = balanceElement.innerText;
-      console.log(balance);
+      // // 3: ===== Get The Current Balance ==============
+      // const balanceElement = document.getElementById('balance');
+      // const balance = balanceElement.innerText;
+      // console.log(balance);
+      const currentBalance = getBalance();
 
       // 4: ===== Calculate new Balance ==============
 
-         const newBalance = Number(balance) - Number(cashoutAmount) ;
+         const newBalance = currentBalance - Number(cashoutAmount) ;
          if(newBalance < 0){
             alert("Your Amount is not available.");
             return;
@@ -32,8 +33,7 @@
 
       if(pin === "4321"){
          alert("Your Cashout Successfully Complete");
-            balanceElement.innerText = newBalance;
-         return;
+          setBalance(newBalance);
          
       }else{
          alert('Your Pin Number Is Not Valid');

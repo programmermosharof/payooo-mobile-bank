@@ -94,8 +94,59 @@
         </div>
     </section>
 
+
+    <!-- Add Money Section -->
+      <section id="add-money" class="w-11/12 mx-auto py-5">
+        <h2 class="text-xl font-bold mb-5">Add Money</h2>
+
+        <div class="form pt-10">
+        <div class="card bg-[#ffffff] w-full  shrink-0 shadow mx-auto rounded-3xl">
+        <div class="card-body">
+        <fieldset class="fieldset">
+         <label class="label font-bold text-neutral  ">Select A Bank</label>
+         <select id="add-money-bank" class="select rounded-full bg-[#f4f5f7] w-full">
+            <option disabled selected>Select Back</option>
+            <option value="DBBL">DBBL</option>
+             <option class="IBBL">IBBL</option>
+            <option class="City Bank">City Bank</option>
+        </select>
+
+
+        <br>
+
+
+          <label class="label font-bold text-neutral  ">Bank Account Number</label>
+          <input id="add-money-number" minlength="11" maxlength="11" type="text"  class="input rounded-full bg-[#f4f5f7] w-full" placeholder="Enter 11 digit account number" />
+
+          <br>
+
+          <label class="label font-bold text-neutral  ">Amount to Add</label>
+          <input id="add-money-amount"  type="number" class="input rounded-full bg-[#f4f5f7] w-full" placeholder="Add Amount to withdraw" />
+
+
+          <br>
+
+
+          <label class="label font-bold text-neutral ">Pin Number</label>
+          <input id="add-money-pin" minlength="4" maxlength="4"  type="password" class="input rounded-full bg-[#f4f5f7] w-full" placeholder="Enter 4 digit pin number" />
+          
+          <button id="add-money-btn" class="btn   btn-primary mt-4 rounded-full">Add Money</button>
+        </fieldset>
+      </div>
+    </div>
+    </div>
+
+        
+
+     </section>
+
+
+
+    
+
+
     <!-- Cashout Section-->
-     <section id="cashout" class="w-11/12 mx-auto py-5">
+     <section id="cashout" class="w-11/12 mx-auto py-5 hidden">
         <h2 class="text-xl font-bold mb-5">Cashout</h2>
 
         <div class="form pt-10">
@@ -136,7 +187,7 @@
 
       <!-- JavaScript file  -->
        <script src="JavaScript/cashout.js"></script>
-
+       <script src="JavaScript/addMoney.js"></script>
        <script src="JavaScript/machine.js"></script>
 </body>
 </html>
