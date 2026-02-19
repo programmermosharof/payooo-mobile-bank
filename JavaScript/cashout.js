@@ -34,6 +34,25 @@
       if(pin === "4321"){
          alert("Your Cashout Successfully Complete");
           setBalance(newBalance);
+          //   ======= History Container ========
+            const history = document.getElementById('history-container');
+
+            //   ======= New Div Create ========
+            const newHistory = document.createElement('div');
+
+            //   ======= New Div Add In Html ========
+            newHistory.innerHTML =`
+            <div class="history-card p-5 bg-base-100">
+            Cashout Successfully Complete 
+            Account Number: ${cashoutNumber}, 
+            Amount: ${cashoutAmount} 
+            Date: ${new Date()}
+            </div>
+            `;
+
+            //   ======= New Div Add In Html Push ========
+            history.append(newHistory);
+            
          
       }else{
          alert('Your Pin Number Is Not Valid');

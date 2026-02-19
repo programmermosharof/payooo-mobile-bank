@@ -34,11 +34,30 @@ document.getElementById("add-money-btn").addEventListener('click', function(){
 
       if(pin === "1234"){
          alert(`Add Money Successfully Complete 
-            Bank Name: ${bankAccount} 
+            Bank Name: ${bankAccount}
             Date: ${new Date()}`);
           setBalance(newBalance);
-         
-      }else{
+
+            //   ======= History Container ========
+            const history = document.getElementById('history-container');
+
+            //   ======= New Div Create ========
+            const newHistory = document.createElement('div');
+
+            //   ======= New Div Add In Html ========
+            newHistory.innerHTML =`
+            <div class="history-card p-5 bg-base-100">
+            Add Money Successfully Complete 
+            Bank Name: ${bankAccount}, 
+            Account Number: ${accountNumber} 
+            Date: ${new Date()}
+            </div>
+            `;
+
+            //   ======= New Div Add In Html Push ========
+            history.append(newHistory);}
+            
+            else{
          alert('Your Pin Number Is Not Valid');
          return;
       }
