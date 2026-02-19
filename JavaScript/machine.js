@@ -20,3 +20,21 @@ function setBalance(amount){
     const balanceElement = document.getElementById('balance');
     balanceElement.innerText = amount;
 }
+
+
+// Machine ID > Hide All > Show ALL
+function showOnly(id){
+   const addMoney = document.getElementById('add-money');
+    const cashout = document.getElementById('cashout');
+    console.log(`Add Money-${addMoney},Cashout -${cashout}`);
+
+
+    // All Content Hide 
+    addMoney.classList.add('hidden');
+    cashout.classList.add('hidden');
+    //  Click Button then Show Content
+    const Selected = document.getElementById(id);
+    Selected.classList.remove('hidden');
+
+
+}
