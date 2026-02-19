@@ -72,7 +72,7 @@
                 <p>Cashout</p>
             </button>
 
-            <button  class="btn flex-col h-full py-4 btn-primary btn-soft">
+            <button onclick="showOnly('transfer-money',)" class="btn flex-col h-full py-4 btn-primary btn-soft">
                 <img src="assets/opt-3.png" alt="Transfer Money">
                 <p class="">Transfer Money</p>
             </button>
@@ -181,7 +181,75 @@
      </section>
 
 
-         <!-- Transaction History Section-->
+         <!-- Cashout Section-->
+     <section id="cashout" class="w-11/12 mx-auto py-5 hidden">
+        <h2 class="text-xl font-bold mb-5">Cashout</h2>
+
+        <div class="form pt-10">
+        <div class="card bg-[#ffffff] w-full  shrink-0 shadow mx-auto rounded-3xl">
+        <div class="card-body">
+        <fieldset class="fieldset">
+          <label class="label font-bold text-neutral  ">Agent Number</label>
+          <input id="cashout-number" minlength="11" maxlength="11" type="text" class="input rounded-full bg-[#f4f5f7] w-full" placeholder="Enter 11 digit number" />
+
+          <br>
+
+          <label class="label font-bold text-neutral  ">Amount</label>
+          <input id="cashout-amount"  type="number" class="input rounded-full bg-[#f4f5f7] w-full" placeholder="Enter amount to withdraw" />
+
+
+          <br>
+
+
+          <label class="label font-bold text-neutral ">Pin Number</label>
+          <input id="cashout-pin" minlength="4" maxlength="4"  type="password" class="input rounded-full bg-[#f4f5f7] w-full" placeholder="Enter 4 digit pin number" />
+          
+          <button id="cashout-btn" class="btn   btn-primary mt-4 rounded-full">Withdraw Money</button>
+        </fieldset>
+      </div>
+    </div>
+    </div>
+
+        
+
+     </section>
+
+
+              <!-- Transfer Money Section-->
+     <section id="transfer-money" class="w-11/12 mx-auto py-5 hidden">
+        <h2 class="text-xl font-bold mb-5">Transfer Money</h2>
+
+        <div class="form pt-10">
+        <div class="card bg-[#ffffff] w-full  shrink-0 shadow mx-auto rounded-3xl">
+        <div class="card-body">
+        <fieldset class="fieldset">
+          <label class="label font-bold text-neutral  ">User Account Number</label>
+          <input id="transfer-number" minlength="11" maxlength="11" type="text" class="input rounded-full bg-[#f4f5f7] w-full" placeholder="Enter 11 digit number" />
+
+          <br>
+
+          <label class="label font-bold text-neutral  ">Amount</label>
+          <input id="treansfer-amount"  type="number" class="input rounded-full bg-[#f4f5f7] w-full" placeholder="Enter amount to transfer" />
+
+
+          <br>
+
+
+          <label class="label font-bold text-neutral ">Pin Number</label>
+          <input id="transfer-pin" minlength="4" maxlength="4"  type="password" class="input rounded-full bg-[#f4f5f7] w-full" placeholder="Enter 4 digit pin number" />
+          
+          <button id="transfer-btn" class="btn   btn-primary mt-4 rounded-full">Send Now</button>
+        </fieldset>
+      </div>
+    </div>
+    </div>
+
+        
+
+     </section>
+
+
+      <!-- Transaction History Section-->
      <section id="history" class="w-11/12 mx-auto py-5 hidden">
         <h2 class="text-xl font-bold mb-5">Transaction History</h2>
         <div class="space-y-5" id="history-container">
@@ -191,6 +259,12 @@
         </div>
 
     </section>
+
+
+       
+
+
+
 
 
 

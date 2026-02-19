@@ -27,6 +27,7 @@ function showOnly(id){
    const addMoney = document.getElementById('add-money');
     const cashout = document.getElementById('cashout');
     const history = document.getElementById('history');
+      const transfer = document.getElementById('transfer-money');
    
 
 
@@ -34,6 +35,7 @@ function showOnly(id){
     addMoney.classList.add('hidden');
     cashout.classList.add('hidden');
     history.classList.add('hidden');
+    transfer.classList.add('hidden')
     //  Click Button then Show Content
     const Selected = document.getElementById(id);
     Selected.classList.remove('hidden');
