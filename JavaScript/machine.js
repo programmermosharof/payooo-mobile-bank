@@ -28,7 +28,8 @@ function showOnly(id){
    const cashout = document.getElementById('cashout');
    const history = document.getElementById('history');
    const transfer = document.getElementById('transfer-money');
-   const coupon = document.getElementById('get-bonus')
+   const coupon = document.getElementById('get-bonus');
+   const payBill = document.getElementById('pay-bill')
    
 
 
@@ -38,6 +39,8 @@ function showOnly(id){
     history.classList.add('hidden');
     transfer.classList.add('hidden')
     coupon.classList.add('hidden')
+    payBill.classList.add('hidden')
+    
     //  Click Button then Show Content
     const Selected = document.getElementById(id);
     Selected.classList.remove('hidden');

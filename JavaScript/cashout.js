@@ -128,6 +128,144 @@
 
    });
 
+// ================================ <!-- Select To Pay Section --> =========================
+// =========================================================================================
+   document.getElementById('cashout-btn').addEventListener('click', function(){
+      
+      // 1: ============== Get The Agent Number $ Validate ==============
+      const cashoutNumber = getValueFormInput("cashout-number");
+      
+       if(cashoutNumber.length !=11){
+        alert("Your Number is Not valid");
+        return;
+       }
+
+      
+      //2: ============== Cashout Amount ==============
+         const cashoutAmount = getValueFormInput('cashout-amount');
+         
+      // // 3: ===== Get The Current Balance ==============
+      // const balanceElement = document.getElementById('balance');
+      // const balance = balanceElement.innerText;
+      // console.log(balance);
+      const currentBalance = getBalance();
+
+      // 4: ===== Calculate new Balance ==============
+
+         const newBalance = currentBalance - Number(cashoutAmount) ;
+         if(newBalance < 0){
+            alert("Your Amount is not available.");
+            return;
+            }
+         console.log(newBalance);
+
+      // 5: ===== Get The Pin Verify ==============
+
+      const pin = getValueFormInput("cashout-pin")
+
+      if(pin === "1234"){
+         alert("Your Cashout Successfully Complete");
+          setBalance(newBalance);
+          //   ======= History Container ========
+            const history = document.getElementById('history-container');
+
+            //   ======= New Div Create ========
+            const newHistory = document.createElement('div');
+
+            //   ======= New Div Add In Html ========
+            newHistory.innerHTML =`
+            <div class="history-card p-5 bg-base-100">
+            Cashout Successfully Complete 
+            Account Number: ${cashoutNumber}, 
+            Amount: ${cashoutAmount} 
+            Date: ${new Date()}
+            </div>
+            `;
+
+            //   ======= New Div Add In Html Push ========
+            history.append(newHistory);
+            
+         
+      }else{
+         alert('Your Pin Number Is Not Valid');
+         return;
+      }
+
+   });
+
+
+   // ============================= Transfer Money Section ============================
+   // =================================================================================
+
+      document.getElementById('pay-bill-btn').addEventListener('click', function(){
+
+         const payBill = getValueFormInput('pay-bill-account')
+
+         if(payBill == 'Select Back'){
+        alert("Please Select The Pya Bill Account ");
+        return;
+    }
+      
+      // 1: ============== Get The Agent Number $ Validate ==============
+      const payNumber = getValueFormInput("pay-number");
+      
+       if(payNumber.length !=11){
+        alert("Your Number is Not valid");
+        return;
+       }
+
+      
+      //2: ============== Transfer Money Amount ==============
+         const payAmount = getValueFormInput('pay-amount');
+         
+      // // 3: ===== Get The Current Balance ==============
+      // const balanceElement = document.getElementById('balance');
+      // const balance = balanceElement.innerText;
+      // console.log(balance);
+      const currentBalance = getBalance();
+
+      // 4: ===== Calculate new Balance ==============
+
+         const newBalance = currentBalance - Number(payAmount) ;
+         if(newBalance < 0){
+            alert("Your Amount is not available.");
+            return;
+            }
+         console.log(newBalance);
+
+      // 5: ===== Get The Pin Verify ==============
+
+      const pin = getValueFormInput("pay-pin")
+
+      if(pin === "1234"){
+         alert("Pay Bill Successfully Complete");
+          setBalance(newBalance);
+          //   ======= History Container ========
+            const history = document.getElementById('history-container');
+
+            //   ======= New Div Create ========
+            const newHistory = document.createElement('div');
+
+            //   ======= New Div Add In Html ========
+            newHistory.innerHTML =`
+            <div class="history-card p-5 bg-base-100">
+            Pay Bill Successfully Complete 
+            Account Number: ${payNumber}, 
+            Amount: ${payAmount} 
+            Date: ${new Date()}
+            </div>
+            `;
+
+            //   ======= New Div Add In Html Push ========
+            history.append(newHistory);
+            
+         
+      }else{
+         alert('Your Pin Number Is Not Valid');
+         return;
+      }
+
+   });
 
   
    
