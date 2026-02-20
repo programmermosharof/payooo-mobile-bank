@@ -14,7 +14,7 @@ document.getElementById("login-btn").addEventListener('click', function(){
     if(contactNumber === '01978962383' && checkPin === '4321'){
         alert('Your Login Successfully complete ');
 
-        window.location.assign("/home.html");    
+        window.location.assign("home.html");    
     }else{
         alert('Yor Password is Wrong')
         return;
