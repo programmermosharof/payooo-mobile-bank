@@ -181,40 +181,6 @@
      </section>
 
 
-         <!-- Cashout Section-->
-     <section id="cashout" class="w-11/12 mx-auto py-5 hidden">
-        <h2 class="text-xl font-bold mb-5">Cashout</h2>
-
-        <div class="form pt-10">
-        <div class="card bg-[#ffffff] w-full  shrink-0 shadow mx-auto rounded-3xl">
-        <div class="card-body">
-        <fieldset class="fieldset">
-          <label class="label font-bold text-neutral  ">Agent Number</label>
-          <input id="cashout-number" minlength="11" maxlength="11" type="text" class="input rounded-full bg-[#f4f5f7] w-full" placeholder="Enter 11 digit number" />
-
-          <br>
-
-          <label class="label font-bold text-neutral  ">Amount</label>
-          <input id="cashout-amount"  type="number" class="input rounded-full bg-[#f4f5f7] w-full" placeholder="Enter amount to withdraw" />
-
-
-          <br>
-
-
-          <label class="label font-bold text-neutral ">Pin Number</label>
-          <input id="cashout-pin" minlength="4" maxlength="4"  type="password" class="input rounded-full bg-[#f4f5f7] w-full" placeholder="Enter 4 digit pin number" />
-          
-          <button id="cashout-btn" class="btn   btn-primary mt-4 rounded-full">Withdraw Money</button>
-        </fieldset>
-      </div>
-    </div>
-    </div>
-
-        
-
-     </section>
-
-
               <!-- Transfer Money Section-->
      <section id="transfer-money" class="w-11/12 mx-auto py-5 hidden">
         <h2 class="text-xl font-bold mb-5">Transfer Money</h2>
@@ -249,7 +215,7 @@
      </section>
      
                    <!-- Get Bonus Section-->
-     <section id="get-bonus" class="w-11/12 mx-auto py-5  hidden">
+     <section id="get-bonus" class="w-11/12 mx-auto py-5  ">
         <h2 class="text-xl font-bold mb-5">Get Bonus</h2>
 
         <div class="form pt-10">
@@ -268,6 +234,54 @@
         
 
      </section>
+
+         <!-- Select To Pay Section -->
+      <section id="pay-bill" class="w-11/12 mx-auto py-5 hidden">
+        <h2 class="text-xl font-bold mb-5">Pay Bill</h2>
+
+        <div class="form pt-10">
+        <div class="card bg-[#ffffff] w-full  shrink-0 shadow mx-auto rounded-3xl">
+        <div class="card-body">
+        <fieldset class="fieldset">
+         <label class="label font-bold text-neutral">Select To Pay</label>
+         <select id="pay-bill-account" class="select rounded-full bg-[#f4f5f7] w-full">
+            <option disabled selected>Select Back</option>
+            <option value="Bkash">Bkash</option>
+             <option class="IBBL">IBBL</option>
+            <option class="City Bank">City Bank</option>
+        </select>
+
+
+        <br>
+
+
+          <label class="label font-bold text-neutral  ">Biller Account Number</label>
+          <input id="pay-number" minlength="11" maxlength="11" type="text"  class="input rounded-full bg-[#f4f5f7] w-full" placeholder="Enter account number" />
+
+          <br>
+
+          <label class="label font-bold text-neutral">Amount to Pay</label>
+          <input id="pay-amount"  type="number" class="input rounded-full bg-[#f4f5f7] w-full" placeholder="Add Amount to pay" />
+
+
+          <br>
+
+
+          <label class="label font-bold text-neutral ">Pin Number</label>
+          <input id="pay-pin" minlength="4" maxlength="4"  type="password" class="input rounded-full bg-[#f4f5f7] w-full" placeholder="Enter 4 digit pin number" />
+          
+          <button id="pay-bill-btn" class="btn   btn-primary mt-4 rounded-full">Pay Now</button>
+        </fieldset>
+      </div>
+    </div>
+    </div>
+
+        
+
+     </section>
+    
+
+
     
 
 
