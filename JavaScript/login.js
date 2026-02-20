@@ -11,7 +11,7 @@ document.getElementById("login-btn").addEventListener('click', function(){
 
     // ============== check Mobile number and pin Number ==============
 
-    if(contactNumber === '01978962383' && checkPin === '4321'){
+    if(contactNumber === '01978962383' && checkPin === '1234'){
         alert('Your Login Successfully complete ');
 
         window.location.assign("home.html");    
