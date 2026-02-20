@@ -25,9 +25,10 @@ function setBalance(amount){
 // Machine ID > Hide All > Show ALL
 function showOnly(id){
    const addMoney = document.getElementById('add-money');
-    const cashout = document.getElementById('cashout');
-    const history = document.getElementById('history');
-      const transfer = document.getElementById('transfer-money');
+   const cashout = document.getElementById('cashout');
+   const history = document.getElementById('history');
+   const transfer = document.getElementById('transfer-money');
+   const coupon = document.getElementById('get-bonus')
    
 
 
@@ -36,6 +37,7 @@ function showOnly(id){
     cashout.classList.add('hidden');
     history.classList.add('hidden');
     transfer.classList.add('hidden')
+    coupon.classList.add('hidden')
     //  Click Button then Show Content
     const Selected = document.getElementById(id);
     Selected.classList.remove('hidden');

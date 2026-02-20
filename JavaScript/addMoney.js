@@ -1,5 +1,5 @@
 document.getElementById("add-money-btn").addEventListener('click', function(){
-    console.log("Button clicked");
+  
     // ========= Get Bank Account ===========
     const bankAccount = getValueFormInput('add-money-bank');
     if(bankAccount == 'Select Back'){
@@ -69,4 +69,40 @@ document.getElementById("add-money-btn").addEventListener('click', function(){
 // ============================== <!-- Get Bonus Section--> =============================
 //=======================================================================================
 
+document.getElementById('get-bonus-btn').addEventListener('click', function(){
+
+       // ========= Coupon Code  ===========
+
+    const couponCode = getValueFormInput('get-bonus-code');
+
+   //  Validate Coupon Code 
+    if(couponCode.length !=6){
+        alert("Please Enter a Valid 6 digit Coupon ");
+        return;
+       }
+
+      //  Coupon Code Check 
+
+            if(couponCode === '123456'){
+        const currentBalance = getBalance();
+        const newBalance = currentBalance + 50;
+        setBalance(newBalance);
+
+        // History te add 
+        const history = document.getElementById('history-container');
+        const newHistory = document.createElement('div');
+        newHistory.innerHTML = `
+        <div class="history-card p-5 bg-base-100">
+            Bonus Added Successfully! 
+            Amount: $50 
+            Date: ${new Date()}
+        </div>`;
+        history.append(newHistory);
+
+        alert("Congratulations! $50 Bonus Added!");
+
+    } else {
+        alert("Invalid Coupon Code!");
+    }
+});
 
